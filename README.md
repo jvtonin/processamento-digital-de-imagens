@@ -1,7 +1,10 @@
 # 📷 Java - Processamento Digital de Imagens
 
-Projeto em Java focado em PDI (Processamento Digital de Imagens), com:
+Projeto feito em Java para a disciplina de PDI (Processamento Digital de Imagens).
 
-✨ Filtros básicos
-🔄 Transformações geométricas
-🖼️ Visualização e manipulação de imagens
+## 🔧 Funcionalidades
+
+- ✨ Filtros básicos
+- 🔄 Transformações geométricas
+- 🖼️ Visualização e manipulação de imagens
+- 💾 Salvamento da imagem processada
