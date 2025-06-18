@@ -7,4 +7,5 @@ Projeto feito em Java para a disciplina de PDI (Processamento Digital de Imagens
 - ✨ Filtros básicos
 - 🔄 Transformações geométricas
 - 🖼️ Visualização e manipulação de imagens
+- 🧠 Operações de morfologia matemática (erosão, dilatação, afinamento)
 - 💾 Salvamento da imagem processada
