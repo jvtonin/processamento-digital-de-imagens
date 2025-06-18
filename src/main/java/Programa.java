@@ -19,9 +19,7 @@ public class Programa extends JFrame {
         setSize(1000, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-    
-        JLabel label = new JLabel("Iago Mauri e João Tonin");
-    
+        
         painelDeImagens = new JPanel(new GridBagLayout());
     
         labelOriginal = new JLabel();
@@ -100,15 +98,35 @@ public class Programa extends JFrame {
     
         JMenuItem filtroThreshold = new JMenuItem("Threshold");
         filtroThreshold.addActionListener(e -> filtro.aplicaThreshold(labelOriginal, labelTransformado, imagemOriginalImportada));
-    
+
         filtros.add(filtroGrayscale);
         filtros.add(filtroPassaBaixa);
         filtros.add(filtroPassaAlta);
         filtros.add(filtroThreshold);
         barraDoMenu.add(filtros);
+
+
+
+        Morfologia morfologia = new Morfologia();
+
+        JMenu morfologias = new JMenu("Morfologia");
+
+        JMenuItem dilatacao = new JMenuItem("Dilatação");
+        dilatacao.addActionListener(e -> morfologia.aplicaDilatacao(labelOriginal, labelTransformado, imagemOriginalImportada));
+
+        JMenuItem erosao = new JMenuItem("Erosão");
+        erosao.addActionListener(e -> morfologia.aplicaErosao(labelOriginal, labelTransformado, imagemOriginalImportada));
+
+        JMenuItem afinamento = new JMenuItem("Afinamento");
+        afinamento.addActionListener(e -> morfologia.aplicaAfinamento(labelOriginal, labelTransformado, imagemOriginalImportada));
+
+        morfologias.add(dilatacao);
+        morfologias.add(erosao);
+        morfologias.add(afinamento);
+        barraDoMenu.add(morfologias);
+
     
         setJMenuBar(barraDoMenu);
-        painel.add(label);
         add(painel, BorderLayout.NORTH);
         add(painelDeImagens, BorderLayout.CENTER);
     }
